@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>midutimes 📆</title>
+  </head>
+  <body class="toast">
+    <wc-toast></wc-toast>
+    <main class="container">
+      <form>
+        <label>
+          Selecciona una fecha y una hora:
+          <input name="date" type="datetime-local" value="2022-09-13T17:00" />
+        </label>
+      </form>
+
+      <label>
+        Resultado:
+        <textarea rows="5" readonly placeholder="Aquí aparece el resultado..."></textarea>
+      </label>
+
+
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

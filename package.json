@@ -1,0 +1,18 @@
+{
+  "name": "midu-times",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "vite": "^3.0.7"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
