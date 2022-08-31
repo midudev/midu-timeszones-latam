@@ -1,5 +1,8 @@
 import { toast } from 'https://cdn.skypack.dev/wc-toast'
 import countries from './countries.json'
+import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill'
+
+polyfillCountryFlagEmojis()
 
 const $ = selector => document.querySelector(selector)
 // const $$ = selector => document.querySelectorAll(selector)
