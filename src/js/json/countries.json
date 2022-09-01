@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Spain",
+    "country_code": "ES",
+    "emoji": "🇪🇸",
+    "emoji_unicode": "U+1F1EA U+1F1F8",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ES.svg",
+    "timezones": [
+      "Europe/Madrid", 
+      "Atlantic/Canary"
+    ]
+  },
+  {
+    "name": "Colombia",
+    "country_code": "CO",
+    "emoji": "🇨🇴",
+    "emoji_unicode": "U+1F1E8 U+1F1F4",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CO.svg",
+    "timezones": [
+      "America/Bogota"
+    ]
+  },
+  {
+    "name": "Mexico",
+    "country_code": "MX",
+    "emoji": "🇲🇽",
+    "emoji_unicode": "U+1F1F2 U+1F1FD",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MX.svg",
+    "timezones": [
+      "America/Mexico_City"
+    ]
+  },
+  {
+    "name": "Guatemala",
+    "country_code": "GT",
+    "emoji": "🇬🇹",
+    "emoji_unicode": "U+1F1EC U+1F1F9",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GT.svg",
+    "timezones": [
+      "America/Guatemala"
+    ]
+  },
+  {
+    "name": "Uruguay",
+    "country_code": "UY",
+    "emoji": "🇺🇾",
+    "emoji_unicode": "U+1F1FA U+1F1FE",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UY.svg",
+    "timezones": [
+      "America/Montevideo"
+    ]
+  },
+  {
+    "name": "Argentina",
+    "country_code": "AR",
+    "emoji": "🇦🇷",
+    "emoji_unicode": "U+1F1E6 U+1F1F7",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AR.svg",
+    "timezones": [
+      "America/Argentina/Buenos_Aires"
+    ]
+  },
+  {
+    "name": "Chile",
+    "country_code": "CL",
+    "emoji": "🇨🇱",
+    "emoji_unicode": "U+1F1E8 U+1F1F1",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CL.svg",
+    "timezones": [
+      "America/Santiago"
+    ]
+  },
+  {
+    "name": "Paraguay",
+    "country_code": "PY",
+    "emoji": "🇵🇾",
+    "emoji_unicode": "U+1F1F5 U+1F1FE",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PY.svg",
+    "timezones": [
+      "America/Asuncion"
+    ]
+  },
+  {
+    "name": "Costa Rica",
+    "country_code": "CR",
+    "emoji": "🇨🇷",
+    "emoji_unicode": "U+1F1E8 U+1F1F7",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CR.svg",
+    "timezones": [
+      "America/Costa_Rica"
+    ]
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "country_code": "TT",
+    "emoji": "🇹🇹",
+    "emoji_unicode": "U+1F1F9 U+1F1F9",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TT.svg",
+    "timezones": [
+      "America/Port_of_Spain"
+    ]
+  },
+  {
+    "name": "Nicaragua",
+    "country_code": "NI",
+    "emoji": "🇳🇮",
+    "emoji_unicode": "U+1F1F3 U+1F1EE",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NI.svg",
+    "timezones": [
+      "America/Managua"
+    ]
+  },
+  {
+    "name": "Bolivia",
+    "country_code": "BO",
+    "emoji": "🇧🇴",
+    "emoji_unicode": "U+1F1E7 U+1F1F4",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BO.svg",
+    "timezones": [
+      "America/La_Paz"
+    ]
+  },
+  {
+    "name": "Peru",
+    "country_code": "PE",
+    "emoji": "🇵🇪",
+    "emoji_unicode": "U+1F1F5 U+1F1EA",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PE.svg",
+    "timezones": [
+      "America/Lima"
+    ]
+  },
+  {
+    "name": "Venezuela",
+    "country_code": "VE",
+    "emoji": "🇻🇪",
+    "emoji_unicode": "U+1F1FB U+1F1EA",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VE.svg",
+    "timezones": ["America/Caracas"]
+  },
+  {
+    "name": "El Salvador",
+    "country_code": "SV",
+    "emoji": "🇸🇻",
+    "emoji_unicode": "U+1F1F8 U+1F1FB",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SV.svg",
+    "timezones": [
+      "America/El_Salvador"
+    ]
+  },
+  {
+    "name": "Ecuador",
+    "country_code": "EC",
+    "emoji": "🇪🇨",
+    "emoji_unicode": "U+1F1EA U+1F1E8",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EC.svg",
+    "timezones": [
+      "America/Guayaquil", 
+      "Pacific/Galapagos"
+    ]
+  },
+  {
+    "name": "Dominican Republic",
+    "country_code": "DO",
+    "emoji": "🇩🇴",
+    "emoji_unicode": "U+1F1E9 U+1F1F4",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DO.svg",
+    "timezones": [
+      "America/Santo_Domingo"
+    ]
+  },
+  {
+    "name": "Brazil",
+    "country_code": "BR",
+    "emoji": "🇧🇷",
+    "emoji_unicode": "U+1F1E7 U+1F1F7",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BR.svg",
+    "timezones": [
+      "America/Noronha",
+      "America/Belem",
+      "America/Fortaleza",
+      "America/Recife",
+      "America/Araguaina",
+      "America/Maceio",
+      "America/Bahia",
+      "America/Sao_Paulo",
+      "America/Campo_Grande",
+      "America/Cuiaba",
+      "America/Santarem",
+      "America/Porto_Velho",
+      "America/Boa_Vista",
+      "America/Manaus",
+      "America/Eirunepe",
+      "America/Rio_Branco"
+    ]
+  },
+  {
+    "name": "Cuba",
+    "country_code": "CU",
+    "emoji": "🇨🇺",
+    "emoji_unicode": "U+1F1E8 U+1F1FA",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CU.svg",
+    "timezones": [
+      "America/Havana"
+    ]
+  },
+  {
+    "name": "Honduras",
+    "country_code": "HN",
+    "emoji": "🇭🇳",
+    "emoji_unicode": "U+1F1ED U+1F1F3",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HN.svg",
+    "timezones": [
+      "America/Tegucigalpa"
+    ]
+  },
+  {
+    "name": "Panama",
+    "country_code": "PA",
+    "emoji": "🇵🇦",
+    "emoji_unicode": "U+1F1F5 U+1F1E6",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PA.svg",
+    "timezones": [
+      "America/Panama"
+    ]
+  },
+  {
+    "name": "Puerto Rico",
+    "country_code": "PR",
+    "emoji": "🇵🇷",
+    "emoji_unicode": "U+1F1F5 U+1F1F7",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PR.svg",
+    "timezones": [
+      "America/Puerto_Rico"
+    ]
+  }
+]
