@@ -1,8 +1,6 @@
 import { toast } from 'https://cdn.skypack.dev/wc-toast'
 import countries from './countries.json'
-
-const $ = selector => document.querySelector(selector)
-// const $$ = selector => document.querySelectorAll(selector)
+import { $, setInitialDate } from './utils'
 
 function changeTimeZone (date, timeZone) {
   const dateToUse = typeof date === 'string'
@@ -77,3 +75,5 @@ $input.addEventListener('change', () => {
 
   $textarea.value = html
 })
+
+setInitialDate()
