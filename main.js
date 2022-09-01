@@ -15,21 +15,28 @@ function changeTimeZone (date, timeZone) {
   }))
 }
 
-const transformDateToString = (date) => {
-  const localDate = date.toLocaleString('es-ES', {
-    hour12: false,
+const transformDateToString = (date, dateFormat) => {
+  const localCode = dateFormat ? 'en-US' : 'es-Es'
+  const localDate = date.toLocaleString(localCode, {
+    hour12: dateFormat,
     hour: 'numeric',
     minute: 'numeric'
   })
 
-  return localDate.replace(':00', 'H')
+  if (dateFormat && localDate.includes(':00')) return localDate.replace(':00', '').padStart(5, '0')
+  if (dateFormat && !localDate.includes(':00')) return localDate.padStart(8, '0')
+  if (!dateFormat && localDate.includes(':00')) return localDate.replace(':00', ' H').padStart(4, '0')
+
+  return (`${localDate} H`).padStart(7, '0')
 }
 
-const $input = $('input')
+const $input = $('#date-time')
 const $textarea = $('textarea')
+const $switch = $('#date-format')
 
 $input.addEventListener('change', () => {
   const date = $input.value
+  const dateFormat = $switch.checked
 
   const mainDate = new Date(date)
 
@@ -63,7 +70,7 @@ $input.addEventListener('change', () => {
     const [country] = countries
     const { date } = country
 
-    return `${transformDateToString(date)} ${flags}`
+    return `${transformDateToString(date, dateFormat)} ${flags}`
   }).join('\n')
 
   // copiamos en el portapapeles el código
