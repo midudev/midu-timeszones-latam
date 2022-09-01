@@ -79,7 +79,7 @@ $input.addEventListener('change', () => {
   fillTextArea()
 
   // copiamos en el portapapeles y mostramos la notificación
-  copyTextArea.then(() => {
+  copyTextArea().then(() => {
     toast('¡Copiado al portapeles!', {
       icon: {
         type: 'success'
@@ -88,14 +88,10 @@ $input.addEventListener('change', () => {
   })
 })
 
-/**
- * Function to be executed when the page loads
- */
 const onLoad = async () => {
+  setInitialDate()
   fillTextArea()
   await copyTextArea()
 }
 
 onLoad()
-
-setInitialDate()
