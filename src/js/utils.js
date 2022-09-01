@@ -1,5 +1,5 @@
 import { changeTimeZone, transformDateToString } from './date'
-import countries from '../countries/countries.json'
+import countries from './json/countries.json'
 
 export const $ = (selector) => document.querySelector(selector)
 export const $input = $('input')
