@@ -1,8 +1,9 @@
 import { toast } from 'https://cdn.skypack.dev/wc-toast'
 import countries from './countries.json'
+import { $, setInitialDate } from './utils'
+import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill'
 
-const $ = selector => document.querySelector(selector)
-// const $$ = selector => document.querySelectorAll(selector)
+polyfillCountryFlagEmojis()
 
 function changeTimeZone (date, timeZone) {
   const dateToUse = typeof date === 'string'
@@ -96,3 +97,5 @@ const onLoad = async () => {
 }
 
 onLoad()
+
+setInitialDate()
