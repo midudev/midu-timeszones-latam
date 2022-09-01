@@ -26,5 +26,5 @@ export const setInitialDate = () => {
   const iso = localDate.toISOString().slice(0, 16) // keep the first 16 chars (YYYY-MM-DDTHH:mm)
   // console.log(iso) -> '2022-08-31T22:00'
 
-  $('input').value = iso
+  $('#date-time').value = iso
 }

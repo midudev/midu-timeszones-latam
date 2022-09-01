@@ -11,16 +11,21 @@
   <body class="toast">
     <wc-toast></wc-toast>
     <main class="container">
+      <label>
+        <input type="checkbox" id="date-format" role="switch">
+        Usar formato de 12 horas.
+      </label>
+
       <form>
         <label>
           Selecciona una fecha y una hora:
-          <input name="date" type="datetime-local" value="2022-09-13T17:00" />
+          <input id="date-time" name="date" type="datetime-local" />
         </label>
       </form>
 
       <label>
         Resultado:
-        <textarea rows="5" readonly placeholder="Aquí aparece el resultado..."></textarea>
+        <textarea rows="6" readonly placeholder="Aquí aparece el resultado..."></textarea>
       </label>
 
 
