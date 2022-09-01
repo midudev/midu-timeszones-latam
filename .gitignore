@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 package-lock.json
+pnpm-lock.yaml
