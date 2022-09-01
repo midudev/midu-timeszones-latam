@@ -1,50 +1,21 @@
 [
   {
     "name": "Spain",
-    "dial_code": "+34",
     "country_code": "ES",
     "emoji": "🇪🇸",
-    "emoji_unicode": "U+1F1EA U+1F1F8",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ES.svg",
-    "timezones": [
-      "Europe/Madrid",
-      "Africa/Ceuta",
-      "Atlantic/Canary"
-    ],
-    "latlng": [
-      40,
-      -4
-    ],
-    "capital": "Madrid",
-    "currency_code": "EUR",
-    "continent": "Europe"
+    "timezones": ["Europe/Madrid", "Africa/Ceuta", "Atlantic/Canary"]
   },
 
   {
     "name": "Colombia",
-    "dial_code": "+57",
     "country_code": "CO",
     "emoji": "🇨🇴",
-    "emoji_unicode": "U+1F1E8 U+1F1F4",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CO.svg",
-    "timezones": [
-      "America/Bogota"
-    ],
-    "latlng": [
-      4,
-      -72
-    ],
-    "capital": "Bogotá",
-    "currency_code": "COP",
-    "continent": "South America"
+    "timezones": ["America/Bogota"]
   },
   {
     "name": "Mexico",
-    "dial_code": "+52",
     "country_code": "MX",
     "emoji": "🇲🇽",
-    "emoji_unicode": "U+1F1F2 U+1F1FD",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MX.svg",
     "timezones": [
       "America/Mexico_City",
       "America/Cancun",
@@ -57,249 +28,126 @@
       "America/Hermosillo",
       "America/Tijuana",
       "America/Bahia_Banderas"
-    ],
-    "latlng": [
-      23,
-      -102
-    ],
-    "capital": "Mexico City",
-    "currency_code": "MXN",
-    "continent": "North America"
+    ]
   },
   {
     "name": "Uruguay",
-    "dial_code": "+598",
     "country_code": "UY",
     "emoji": "🇺🇾",
-    "emoji_unicode": "U+1F1FA U+1F1FE",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UY.svg",
-    "timezones": [
-      "America/Montevideo"
-    ],
-    "latlng": [
-      -33,
-      -56
-    ],
-    "capital": "Montevideo",
-    "currency_code": "UYU",
-    "continent": "South America"
+    "timezones": ["America/Montevideo"]
   },
   {
     "name": "Argentina",
-    "dial_code": "+54",
     "country_code": "AR",
     "emoji": "🇦🇷",
-    "emoji_unicode": "U+1F1E6 U+1F1F7",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AR.svg",
-    "timezones": [
-      "America/Argentina/Buenos_Aires"
-    ],
-    "latlng": [
-      -34,
-      -64
-    ],
-    "capital": "Buenos Aires",
-    "currency_code": "ARS",
-    "continent": "South America"
+    "timezones": ["America/Argentina/Buenos_Aires"]
   },
   {
     "name": "Chile",
-    "dial_code": "+56",
     "country_code": "CL",
     "emoji": "🇨🇱",
-    "emoji_unicode": "U+1F1E8 U+1F1F1",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CL.svg",
-    "timezones": [
-      "America/Santiago",
-      "Pacific/Easter"
-    ],
-    "latlng": [
-      -30,
-      -71
-    ],
-    "capital": "Santiago",
-    "currency_code": "CLP",
-    "continent": "South America"
+    "timezones": ["America/Santiago", "Pacific/Easter"]
   },
   {
     "name": "Paraguay",
-    "dial_code": "+595",
     "country_code": "PY",
     "emoji": "🇵🇾",
-    "emoji_unicode": "U+1F1F5 U+1F1FE",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PY.svg",
-    "timezones": [
-      "America/Asuncion"
-    ],
-    "latlng": [
-      -23,
-      -58
-    ],
-    "capital": "Asunción",
-    "currency_code": "PYG",
-    "continent": "South America"
+    "timezones": ["America/Asuncion"]
   },
   {
     "name": "Costa Rica",
-    "dial_code": "+506",
     "country_code": "CR",
     "emoji": "🇨🇷",
-    "emoji_unicode": "U+1F1E8 U+1F1F7",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CR.svg",
-    "timezones": [
-      "America/Costa_Rica"
-    ],
-    "latlng": [
-      10,
-      -84
-    ],
-    "capital": "San José",
-    "currency_code": "CRC",
-    "continent": "North America"
+    "timezones": ["America/Costa_Rica"]
   },
   {
     "name": "Trinidad and Tobago",
-    "dial_code": "+1868",
     "country_code": "TT",
     "emoji": "🇹🇹",
-    "emoji_unicode": "U+1F1F9 U+1F1F9",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TT.svg",
-    "timezones": [
-      "America/Port_of_Spain"
-    ],
-    "latlng": [
-      11,
-      -61
-    ],
-    "capital": "Port of Spain",
-    "currency_code": "TTD",
-    "continent": "North America"
+    "timezones": ["America/Port_of_Spain"]
   },
   {
     "name": "Nicaragua",
-    "dial_code": "+505",
     "country_code": "NI",
     "emoji": "🇳🇮",
-    "emoji_unicode": "U+1F1F3 U+1F1EE",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NI.svg",
-    "timezones": [
-      "America/Managua"
-    ],
-    "latlng": [
-      13,
-      -85
-    ],
-    "capital": "Managua",
-    "currency_code": "NIO",
-    "continent": "North America"
+    "timezones": ["America/Managua"]
   },
   {
     "name": "Bolivia",
-    "dial_code": "+591",
     "country_code": "BO",
     "emoji": "🇧🇴",
-    "emoji_unicode": "U+1F1E7 U+1F1F4",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BO.svg",
-    "timezones": [
-      "America/La_Paz"
-    ],
-    "latlng": [
-      -17,
-      -65
-    ],
-    "capital": "Sucre",
-    "currency_code": "BOB",
-    "continent": "South America"
+    "timezones": ["America/La_Paz"]
   },
   {
     "name": "Peru",
-    "dial_code": "+51",
     "country_code": "PE",
     "emoji": "🇵🇪",
-    "emoji_unicode": "U+1F1F5 U+1F1EA",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PE.svg",
-    "timezones": [
-      "America/Lima"
-    ],
-    "latlng": [
-      -10,
-      -76
-    ],
-    "capital": "Lima",
-    "currency_code": "PEN",
-    "continent": "South America"
+    "timezones": ["America/Lima"]
   },
   {
     "name": "Venezuela",
-    "dial_code": "+58",
     "country_code": "VE",
     "emoji": "🇻🇪",
-    "emoji_unicode": "U+1F1FB U+1F1EA",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VE.svg",
-    "timezones": [
-      "America/Caracas"
-    ],
-    "latlng": [
-      8,
-      -66
-    ],
-    "capital": "Caracas",
-    "currency_code": "VEF",
-    "continent": "South America"
+    "timezones": ["America/Caracas"]
   },
   {
     "name": "El Salvador",
-    "dial_code": "+503",
     "country_code": "SV",
     "emoji": "🇸🇻",
-    "emoji_unicode": "U+1F1F8 U+1F1FB",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SV.svg",
-    "timezones": [
-      "America/El_Salvador"
-    ],
-    "latlng": [
-      13.83333333,
-      -88.91666666
-    ],
-    "capital": "San Salvador",
-    "currency_code": "USD",
-    "continent": "North America"
+    "timezones": ["America/El_Salvador"]
   },
   {
     "name": "Ecuador",
-    "dial_code": "+593",
     "country_code": "EC",
     "emoji": "🇪🇨",
-    "emoji_unicode": "U+1F1EA U+1F1E8",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EC.svg",
-    "timezones": [
-      "America/Guayaquil",
-      "Pacific/Galapagos"
-    ],
-    "latlng": [
-      -2,
-      -77.5
-    ],
-    "capital": "Quito",
-    "currency_code": "USD",
-    "continent": "South America"
+    "timezones": ["America/Guayaquil", "Pacific/Galapagos"]
   },
   {
     "name": "Dominican Republic",
-    "dial_code": "+1849",
     "country_code": "DO",
     "emoji": "🇩🇴",
-    "emoji_unicode": "U+1F1E9 U+1F1F4",
-    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DO.svg",
-    "timezones": [
-      "America/Santo_Domingo"
-    ],
-    "latlng": [
-      19,
-      -70.66666666
-    ],
-    "capital": "Santo Domingo",
-    "currency_code": "DOP",
-    "continent": "North America"
+    "timezones": ["America/Santo_Domingo"]
+  },
+  {
+    "name": "Honduras",
+    "country_code": "HN",
+    "emoji": "🇭🇳",
+    "timezones": ["America/Tegucigalpa"]
+  },
+  {
+    "name": "Brazil",
+    "country_code": "BR",
+    "timezones": ["America/Sao_Paulo"],
+    "emoji": "🇧🇷"
+  },
+  {
+    "name": "Cuba",
+    "country_code": "CU",
+    "timezones": ["America/Havana"],
+    "emoji": "🇨🇺"
+  },
+  {
+    "name": "Guatemala",
+    "country_code": "GT",
+    "timezones": ["America/Guatemala"],
+    "emoji": "🇬🇹"
+  },
+  {
+    "name": "Panama",
+    "country_code": "PA",
+    "timezones": ["America/Panama"],
+    "emoji": "🇵🇦"
+  },
+  {
+    "name": "Puerto Rico",
+    "country_code": "PR",
+    "timezones": ["America/Puerto_Rico"],
+    "emoji": "🇵🇷"
+  },
+  {
+    "name": "United States",
+    "country_code": "US",
+    "timezones": ["America/Los_Angeles"],
+    "emoji": "🇺🇸"
   }
 ]
