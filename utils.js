@@ -14,9 +14,7 @@ function roundToNextHour (date) {
  * and finally set the resulting string-date into the date input.
  */
 export const setInitialDate = () => {
-  console.log(new Date())
   const dt = roundToNextHour(new Date())
-  console.log(dt)
   // console.log(dt.toISOString()) // -> 2022-09-01T02:00:00.000Z
   // console.log(dt.getTimezoneOffset()) // -> 240 (GMT-4)
 
