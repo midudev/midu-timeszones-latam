@@ -1,30 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>midutimes 📆</title>
+    <meta charset='UTF-8' />
+    <link 
+      rel='icon'
+      type='image/svg+xml'
+      href='/vite.svg'
+    />
+    <meta 
+      name='viewport'
+      content='width=device-width, initial-scale=1.0'
+    />
+    <meta 
+      name='description'
+      content='Una pequeña app para calcular horas en diferentes países hispanohablantes'
+    />
+    <meta 
+      http-equiv='X-UA-Compatible' 
+      content='IE=7' 
+    />
+    <meta 
+      name='keywords' 
+      content='Time, Spain, SouthAmerica'
+    >
+    <link 
+      rel='stylesheet' 
+      href='/src/css/style.css'
+    />
+    <script 
+      type='module' 
+      src='/src/js/main.js'
+    ></script>
   </head>
-  <body class="toast">
-    <wc-toast></wc-toast>
-    <main class="container">
-      <form>
-        <label>
-          Selecciona una fecha y una hora:
-          <input name="date" type="datetime-local" value="2022-09-13T17:00" />
+    <body class='toast flex items-center justify-center w-screen h-screen flex-col dark:bg-[#353535] dark:text-gray-400 text-[#353535] bg-slate-300'>
+    <div class='pb-8 justify-center items-center'>
+      <header class='text-4xl uppercase font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-[#c21500] to-[#ffc500]'>
+        midutime converter
+      </header>
+    </div>
+    <main class='flex justify-center items-center container'>
+      <div class='border-2 border-blue-700 rounded-2xl py-8 px-6'>
+        <form>
+          <div class='mb-6'>
+            <label 
+              for='date' 
+              class='text-lg py-2 block mb-2 font-medium'
+            >
+              Selecciona una fecha y una hora:
+            </label>
+            <input 
+              class='dark:bg-[#353535] dark:border-gray-600 dark:placeholder-gray-400 border-2 py-2 px-4 rounded-2xl border-cyan-400 w-full dark:focus:border-blue-700' 
+              name='date'
+              id='date'
+              type='datetime-local'
+              value='2022-09-13T17:00'
+            />
+          </div>
+        </form>
+        <label 
+          for='converter' 
+          class='block mb-2 py-2 font-medium text-lg'
+        >
+          Resultado:
         </label>
-      </form>
-
-      <label>
-        Resultado:
-        <textarea rows="5" readonly placeholder="Aquí aparece el resultado..."></textarea>
-      </label>
-
-
+        <textarea 
+          class='font-emoji dark:bg-[#353535] max-h-96 block p-3 w-full text-sm bg-gray-50 rounded-lg border-2 border-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-700 dark:focus:ring-blue-700 focus:border-blue-500 focus:ring-blue-500'
+          id='converter'
+          rows='6'
+          readonly
+          placeholder='Aquí aparece el resultado...'
+        ></textarea>
+      </div>
     </main>
-    <script type="module" src="/main.js"></script>
+    <wc-toast></wc-toast>
   </body>
 </html>
