@@ -15,18 +15,8 @@ function changeTimeZone (date, timeZone) {
   }))
 }
 
-const transformDateToString = (date) => {
-  const localDate = date.toLocaleString('es-ES', {
-    hour12: false,
-    hour: 'numeric',
-    minute: 'numeric'
-  })
-
-  return localDate.replace(':00', 'H')
-}
-
 const $input = $('input')
-const $textarea = $('textarea')
+const $section = $('section')
 
 $input.addEventListener('change', () => {
   const date = $input.value
@@ -58,13 +48,10 @@ $input.addEventListener('change', () => {
 
   console.log(sortedTimesEntries)
 
-  const html = sortedTimesEntries.map(([, countries]) => {
+  const html = sortedTimesEntries.map(([hour, countries]) => {
     const flags = countries.map(country => `${country.emoji}`).join(' ')
-    const [country] = countries
-    const { date } = country
-
-    return `${transformDateToString(date)} ${flags}`
-  }).join('\n')
+    return `<article><span>${hour}H</span><p>${flags}</p></article>`
+  })
 
   // copiamos en el portapapeles el código
   navigator.clipboard.writeText(html)
@@ -76,7 +63,7 @@ $input.addEventListener('change', () => {
       })
     })
 
-  $textarea.value = html
+  $section.innerHTML = html.join('')
 })
 
 setInitialDate()
