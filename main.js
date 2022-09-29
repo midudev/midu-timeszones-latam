@@ -27,6 +27,21 @@ const transformDateToString = (date) => {
 
 const $input = $('input')
 const $textarea = $('textarea')
+const $copy=$('button')
+
+const html =''
+
+$copy.addEventListener('click',()=>{
+// copiamos en el portapapeles el código
+  navigator.clipboard.writeText(html)
+  .then(() => {
+    toast('¡Copiado al portapeles!', {
+      icon: {
+        type: 'success'
+      }
+    })
+  })
+});
 
 $input.addEventListener('change', () => {
   const date = $input.value
@@ -58,7 +73,7 @@ $input.addEventListener('change', () => {
 
   console.log(sortedTimesEntries)
 
-  const html = sortedTimesEntries.map(([, countries]) => {
+  html = sortedTimesEntries.map(([, countries]) => {
     const flags = countries.map(country => `${country.emoji}`).join(' ')
     const [country] = countries
     const { date } = country
@@ -66,15 +81,7 @@ $input.addEventListener('change', () => {
     return `${transformDateToString(date)} ${flags}`
   }).join('\n')
 
-  // copiamos en el portapapeles el código
-  navigator.clipboard.writeText(html)
-    .then(() => {
-      toast('¡Copiado al portapeles!', {
-        icon: {
-          type: 'success'
-        }
-      })
-    })
+  
 
   $textarea.value = html
 })
