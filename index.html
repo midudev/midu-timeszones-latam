@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
   <head>
     <meta charset='UTF-8' />
     <link 
@@ -22,7 +22,17 @@
     <meta 
       name='keywords' 
       content='Time, Spain, SouthAmerica'
-    >
+    />
+    <link
+      as='font' 
+      crossorigin='anonymous' 
+      href='/src/assets/CascadiaCodePL.woff2'
+    />
+    <link 
+      as='font' 
+      crossorigin='anonymous' 
+      href='/src/assets/CascadiaCodePLItalic.woff2'
+    />
     <link 
       rel='stylesheet' 
       href='/src/css/style.css'
@@ -31,47 +41,92 @@
       type='module' 
       src='/src/js/main.js'
     ></script>
+    <style>
+      input:checked ~ .dot {
+        transform: translateX(100%);
+        background-color: #00ff00;
+      }
+    </style>
   </head>
-    <body class='toast flex items-center justify-center w-screen h-screen flex-col dark:bg-[#353535] dark:text-gray-400 text-[#353535] bg-slate-300'>
+  <body 
+    class='
+      toast flex items-center 
+      justify-center w-screen 
+      h-screen flex-col dark:bg-[#353535] 
+      dark:text-gray-400 text-[#353535] 
+      bg-slate-300
+    '
+  >
     <div class='pb-8 justify-center items-center'>
-      <header class='text-4xl uppercase font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-[#c21500] to-[#ffc500]'>
+      <header 
+        class='
+          text-4xl select-none font-CascadiaCodePL 
+          tracking-tighter leading-none uppercase 
+          font-semibold text-transparent bg-clip-text 
+          bg-gradient-to-tr from-[#ff0000] to-[#ffff00]
+        '
+      >
         midutime converter
       </header>
     </div>
     <main class='flex justify-center items-center container'>
-      <div class='border-2 border-blue-700 rounded-2xl py-8 px-6'>
+      <div 
+        class='
+          rounded-3xl border-double border-8 
+          border-cyan-500 dark:border-cyan-700 
+          py-10 px-8
+        '
+      >
         <form>
           <div class='mb-6'>
             <label 
               for='date' 
-              class='text-lg py-2 block mb-2 font-medium'
+              class='text-xs py-2 block mb-2 select-none font-normal font-CascadiaCodePL'
             >
               Selecciona una fecha y una hora:
             </label>
             <input 
-              class='dark:bg-[#353535] dark:border-gray-600 dark:placeholder-gray-400 border-2 py-2 px-4 rounded-2xl border-cyan-400 w-full dark:focus:border-blue-700' 
+              class='
+                dark:bg-[#353535] text-sm select-none 
+                font-CascadiaCodePL dark:placeholder-gray-400 
+                border-4 border-double py-2 px-4 rounded-2xl 
+                border-cyan-500 w-full dark:border-cyan-700 
+                bg-slate-300
+              ' 
               name='date'
               id='date'
               type='datetime-local'
-              value='2022-09-13T17:00'
+              required
             />
           </div>
+          <div class='flex items-center justify-center w-full mb-3'>
+            <label 
+              for='toogle-switch'
+              class='flex items-center cursor-pointer'
+            >
+              <div class='relative'>
+                <input id='toogle-switch' role='switch' type='checkbox' class='sr-only' />
+                <div class='w-10 h-4 bg-gray-600 rounded-full shadow-inner'></div>
+                <div class='dot absolute w-6 h-6 bg-red-700 rounded-full shadow -left-1 -top-1 transition'></div>
+              </div>
+              <div class='select-none ml-3 text-gray-900 dark:text-gray-400 font-normal font-CascadiaCodePL'>
+                Usar formato 12 Hs
+              </div>
+            </label>
+          </div>
         </form>
-        <label 
-          for='converter' 
-          class='block mb-2 py-2 font-medium text-lg'
-        >
+        <label class='block py-2 select-none font-normal text-xs font-CascadiaCodePL'>
           Resultado:
+          <section 
+            class='
+              flex columns-2 mt-3 h-60 gap-2 m-0 
+              items-center flex-wrap text-xs 
+              content-center flex-col
+            '
+          ></section>
         </label>
-        <textarea 
-          class='font-emoji dark:bg-[#353535] max-h-96 block p-3 w-full text-sm bg-gray-50 rounded-lg border-2 border-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-700 dark:focus:ring-blue-700 focus:border-blue-500 focus:ring-blue-500'
-          id='converter'
-          rows='6'
-          readonly
-          placeholder='Aquí aparece el resultado...'
-        ></textarea>
       </div>
     </main>
-    <wc-toast></wc-toast>
+    <wc-toast position='bottom-right'></wc-toast>
   </body>
 </html>
