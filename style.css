@@ -4,7 +4,7 @@ body {
 
 .custom-header {
   display: flex;
-  padding: 20px 0 0 0;
+  padding-block: 20px;
   justify-content: flex-end;
 }
 
@@ -14,8 +14,7 @@ body {
   justify-content: center;
   background-color: #24333e;
   gap: 0.8rem;
-  width: 250px;
+  width: auto;
   height: 48px;
-  font-size: 0.8rem;
   border-radius: 25px;
 }
