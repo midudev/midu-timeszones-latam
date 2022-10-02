@@ -2,12 +2,14 @@
 module.exports = {
   content: [
     './index.html',
-    '*.md'
+    './src/**/*.{html,js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
       fontFamily: {
-        emoji: ['Twemoji Country Flags', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif']
+        Emoji: 'Twemoji Country Flags',
+        CascadiaCodePL: 'Cascadia Code PL',
+        CascadiaCodePLItalic: 'Cascadia Code PL Italic'
       }
     }
   },
