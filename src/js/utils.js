@@ -2,11 +2,13 @@ import { changeTimeZone, transformDateToString } from './date'
 import countries from './json/countries.json'
 
 export const $ = (selector) => document.querySelector(selector)
-export const $input = $('input')
-export const $textarea = $('textarea')
+export const $input = $('#date')
+export const $section = $('section')
+export const $switch = $('#toogle-switch')
 
-export const fillTextArea = () => {
+export const showUTCHours = () => {
   const date = $input.value
+  const dateFormat = $switch.checked
   const mainDate = new Date(date)
   const times = {}
   countries.forEach(country => {
@@ -23,6 +25,7 @@ export const fillTextArea = () => {
       timezones
     })
   })
+
   const sortedTimesEntries = Object
     .entries(times)
     .sort(([timeA], [timeB]) => timeB - +timeA)
@@ -31,17 +34,22 @@ export const fillTextArea = () => {
     const flags = countries.map(country => `${country.emoji}`).join(' ')
     const [country] = countries
     const { date } = country
-
-    return `${transformDateToString(date)} ${flags}`
+    return `
+    <article class='min-w-max w-full rounded-2xl flex border-4 border-double border-cyand-500 dark:border-cyan-700 p-2'>
+      <span class='font-CascadiaCodePL'>${transformDateToString(date, dateFormat)}</span>
+      <p class='ml-2 font-Emoji'>
+        ${flags}
+      </p>
+    </article>
+    `
   })
-    .join('\n')
 
-  $textarea.value = html
+  $section.innerHTML = html.join('')
 }
 
 function roundToNextHour (date) {
-  date.setHours(date.getHours() + Math.ceil(date.getMinutes() / 60))
-  date.setMinutes(0, 0, 0)
+  date.setHours(date.getHours() + Math.ceil(date.getMinutes() / 60) - 1)
+  date.setMinutes(0)
   return date
 }
 
@@ -62,7 +70,7 @@ export const setInitialDate = () => {
   // console.log(localDate.toISOString()) // -> 2022-08-31T22:00:00.000Z
 
   const iso = localDate.toISOString().slice(0, 16) // keep the first 16 chars (YYYY-MM-DDTHH:mm)
-  // console.log(iso) -> '2022-08-31T22:00'
+  // console.log(iso) // -> '2022-08-31T22:00'
 
-  $('input').value = iso
+  $('#date').value = iso
 }

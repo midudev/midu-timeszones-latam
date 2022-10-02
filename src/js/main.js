@@ -1,16 +1,25 @@
 import { toast } from 'wc-toast'
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill'
 import { copyTextArea } from './date'
-import { $input, fillTextArea, setInitialDate } from './utils'
+import { $input, showUTCHours, setInitialDate } from './utils'
 
 $input.addEventListener('change', async () => {
+  showUTCHours()
   polyfillCountryFlagEmojis()
-  fillTextArea()
+
   // copiamos en el portapapeles y mostramos la notificación
   await copyTextArea().then(() => {
-    toast('¡Copiado al portapeles!', {
+    toast('¡Copiado al portapeles! ', {
       icon: {
-        type: 'success'
+        type: 'custom',
+        content: '✅'
+      },
+      theme: {
+        type: 'custom',
+        style: {
+          background: 'dark:bg-blue-500 bg-blue-500',
+          color: 'text-white dark:text-black'
+        }
       }
     })
   })
