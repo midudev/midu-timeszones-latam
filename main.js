@@ -28,14 +28,18 @@ const transformDateToString = (date) => {
 const $input = $('input')
 const $textarea = $('textarea')
 
-$input.addEventListener('change', () => {
+const copyTextArea = async () => {
+  await navigator.clipboard.writeText($textarea.value)
+}
+
+const fillTextArea = () => {
   const date = $input.value
 
   const mainDate = new Date(date)
 
   const times = {}
 
-  countries.forEach(country => {
+  countries.forEach((country) => {
     const { country_code: code, emoji, timezones } = country
     const [timezone] = timezones
 
@@ -58,25 +62,36 @@ $input.addEventListener('change', () => {
 
   console.log(sortedTimesEntries)
 
-  const html = sortedTimesEntries.map(([, countries]) => {
-    const flags = countries.map(country => `${country.emoji}`).join(' ')
-    const [country] = countries
-    const { date } = country
+  const html = sortedTimesEntries
+    .map(([, countries]) => {
+      const flags = countries.map((country) => `${country.emoji}`).join(' ')
+      const [country] = countries
+      const { date } = country
 
-    return `${transformDateToString(date)} ${flags}`
-  }).join('\n')
-
-  // copiamos en el portapapeles el código
-  navigator.clipboard.writeText(html)
-    .then(() => {
-      toast('¡Copiado al portapeles!', {
-        icon: {
-          type: 'success'
-        }
-      })
+      return `${transformDateToString(date)} ${flags}`
     })
+    .join('\n')
 
   $textarea.value = html
+}
+
+$input.addEventListener('change', () => {
+  fillTextArea()
+
+  // copiamos en el portapapeles y mostramos la notificación
+  copyTextArea().then(() => {
+    toast('¡Copiado al portapeles!', {
+      icon: {
+        type: 'success'
+      }
+    })
+  })
 })
 
-setInitialDate()
+const onLoad = async () => {
+  setInitialDate()
+  fillTextArea()
+  await copyTextArea()
+}
+
+onLoad()
