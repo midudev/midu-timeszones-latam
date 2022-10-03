@@ -18,3 +18,35 @@ body {
   height: 48px;
   border-radius: 25px;
 }
+
+.search-list {
+  padding: 0;
+}
+
+.search-hit {
+  background-color: hsl(205deg 42% 15%);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 0;
+}
+
+.search-hit:hover {
+  background-color: #caa748;
+  color: white;
+}
+
+.container-hit {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 10px;
+}
+
+.hit-country-name {
+  width: 80%;
+  margin: 0 8px;
+  font-weight: bold;
+}

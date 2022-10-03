@@ -11,7 +11,7 @@
   <body class="toast">
     <wc-toast></wc-toast>
     <header class="container custom-header">
-      <button class="outline secondary custom-button">
+      <button class="outline secondary custom-button" id="searchCountries">
         <svg
 		      width="24"
 		      height="24"
@@ -52,6 +52,18 @@
 
 
     </main>
+    <dialog>
+      <article>
+        <form>
+          <input type="search" name="search" id="search" 
+            placeholder="Search countries" autocomplete="off" autocapitalize="off"/>
+        </form>
+        <div class="listCountries">
+          <ul role="listbox" class="search-list" id="searchList"></ul>
+        </div>
+      </article>
+    </dialog>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/search.js"></script>
   </body>
 </html>
