@@ -1,20 +1,12 @@
 import countriesData from './allCountries.json'
+import { openingModal } from './dialog'
 import { $, addFavorite, getDataFromStorage, removeFavorite, showTimeResults } from './utils'
 
-const $dialog = $('dialog')
 const $btnSearchCountries = $('#searchCountries')
 const $inputSearch = $('#search')
 const $searchList = $('#searchList')
 
 let handler
-
-const openingModal = () => {
-  if(typeof $dialog.showModal === "function") {
-    $dialog.showModal()
-  } else {
-    console.log('Fallback here!')
-  }
-}
 
 const getItemCountry = (country) => {
   const {name, emoji } = country
@@ -107,4 +99,7 @@ const setHandler = () => {
   }
 	window.addEventListener('keydown', handler)
 }
+
+
+
 setHandler()
