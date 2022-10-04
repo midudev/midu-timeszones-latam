@@ -1,5 +1,5 @@
 import countriesData from './allCountries.json'
-import { $, getDataFromStorage } from './utils'
+import { $, addFavorite, getDataFromStorage, removeFavorite } from './utils'
 
 const $dialog = $('dialog')
 const $btnSearchCountries = $('#searchCountries')
@@ -27,8 +27,8 @@ const getItemCountry = (country) => {
       <div class="hit-country-name">
         <span>${name}</span>
       </div>
-      <div class="hit-action">
-        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" fill="${Boolean(isFavorite) ? "white": "none"}" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
+      <div class="hit-action" data-country="${name}" data-favorite="${Boolean(isFavorite)}">
+        <svg data-country="${name}" data-favorite="${Boolean(isFavorite)}" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" data-country="${name}" data-favorite="${Boolean(isFavorite)}" fill="${Boolean(isFavorite) ? "white": "none"}" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
       </div>
     </div>
   </li>
@@ -55,6 +55,22 @@ $inputSearch.addEventListener('input', (e) => {
   const dataCountries = countriesData.filter(c => c.name.toLocaleLowerCase().includes(q))
   listResults(dataCountries)
   
+})
+
+$searchList.addEventListener('click', (e) => {
+  const countryName = e.target.dataset.country
+  const favorite = e.target.dataset.favorite
+  if(!countryName || !favorite) return
+  // I did this because dataset returns a string
+  if(favorite === 'true') {
+    removeFavorite(countryName)
+  }else {
+    const country = countriesData.find(c => c.name.toLowerCase() === countryName.toLowerCase())
+    console.log(country)
+    addFavorite(country)
+  }
+  const pathFill = favorite === 'true' ? 'none' : 'white'
+  document.querySelector(`path[data-country=${countryName}]`).setAttribute('fill', pathFill);
 })
 
 const removeHandler = () => window.removeEventListener('keydown', handler)

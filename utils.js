@@ -33,3 +33,18 @@ export const getDataFromStorage = (path) => {
   const data = localStorage.getItem(path)
   return data ? JSON.parse(data) : [] 
 }
+
+export const setDataToStorage = (path, data) => {
+  localStorage.setItem(path, JSON.stringify(data))
+}
+
+export const addFavorite = (country) => {
+  const data = getDataFromStorage('countries')
+  const newData = data.concat(country)
+  setDataToStorage('countries', newData)
+}
+export const removeFavorite = (countryName) => {
+  const data = getDataFromStorage('countries')
+  const newData = data.filter(c => c.name !== countryName)
+  setDataToStorage('countries', newData)
+}
