@@ -76,7 +76,6 @@ export const showTimeResults = (date) => {
   const times = {}
   const storageData = getDataFromStorage('countries')
   const countriesData = storageData.length > 0 ? storageData : countries
-  
   countriesData.forEach(country => {
     const { country_code: code, emoji, timezones } = country
     const [timezone] = timezones

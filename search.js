@@ -20,6 +20,7 @@ const getItemCountry = (country) => {
   const {name, emoji } = country
   const storageData = getDataFromStorage('countries')
   const isFavorite = storageData.find(cou => cou.name === name)
+  const className = `fav${name.replaceAll(' ', '')}`
   return `
   <li role="option" class="search-hit">
     <div class="container-hit">
@@ -27,8 +28,22 @@ const getItemCountry = (country) => {
       <div class="hit-country-name">
         <span>${name}</span>
       </div>
-      <div class="hit-action fav${name}" data-country="${name}" data-favorite="${Boolean(isFavorite)}">
-        <svg class="fav${name}" data-country="${name}" data-favorite="${Boolean(isFavorite)}" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" class="fav${name}" data-country="${name}" data-favorite="${Boolean(isFavorite)}" fill="${Boolean(isFavorite) ? "white": "none"}" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
+      <div class="hit-action ${className}" data-country="${name}" data-favorite="${Boolean(isFavorite)}">
+        <svg 
+          class="${className}" 
+          data-country="${name}" 
+          data-favorite="${Boolean(isFavorite)}" 
+          height="21" 
+          viewBox="0 0 21 21" 
+          width="21" 
+          xmlns="http://www.w3.org/2000/svg">
+            <path 
+              d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" class="${className}" 
+              data-country="${name}" data-favorite="${Boolean(isFavorite)}" 
+              fill="${Boolean(isFavorite) ? "white": "none"}" 
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"
+            />
+        </svg>
       </div>
     </div>
   </li>
@@ -64,7 +79,7 @@ $searchList.addEventListener('click', (e) => {
   if(!countryName || !favorite) return
 
   const svgPath = $(`path[data-country="${countryName}"]`)
-  const star = document.querySelectorAll(`.fav${countryName}`)
+  const star = document.querySelectorAll(`.fav${countryName.replaceAll(' ', '')}`)
   const isFavorite = favorite === 'true'
   // I did this because dataset returns a string
   if(isFavorite) {
