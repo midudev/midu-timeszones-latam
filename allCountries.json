@@ -410,6 +410,25 @@
     "continent": "Europe"
   },
   {
+    "name": "Ecuador",
+    "dial_code": "+593",
+    "country_code": "EC",
+    "emoji": "🇪🇨",
+    "emoji_unicode": "U+1F1EA U+1F1E8",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EC.svg",
+    "timezones": [
+      "America/Guayaquil",
+      "Pacific/Galapagos"
+    ],
+    "latlng": [
+      -2,
+      -77.5
+    ],
+    "capital": "Quito",
+    "currency_code": "USD",
+    "continent": "South America"
+  },
+  {
     "name": "Belgium",
     "dial_code": "+32",
     "country_code": "BE",
@@ -1101,6 +1120,60 @@
     "capital": "Djibouti",
     "currency_code": "DJF",
     "continent": "Africa"
+  },
+  {
+    "name": "Dominican Republic",
+    "dial_code": "+1849",
+    "country_code": "DO",
+    "emoji": "🇩🇴",
+    "emoji_unicode": "U+1F1E9 U+1F1F4",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DO.svg",
+    "timezones": [
+      "America/Santo_Domingo"
+    ],
+    "latlng": [
+      19,
+      -70.66666666
+    ],
+    "capital": "Santo Domingo",
+    "currency_code": "DOP",
+    "continent": "North America"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "dial_code": "+1868",
+    "country_code": "TT",
+    "emoji": "🇹🇹",
+    "emoji_unicode": "U+1F1F9 U+1F1F9",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TT.svg",
+    "timezones": [
+      "America/Port_of_Spain"
+    ],
+    "latlng": [
+      11,
+      -61
+    ],
+    "capital": "Port of Spain",
+    "currency_code": "TTD",
+    "continent": "North America"
+  },
+  {
+    "name": "El Salvador",
+    "dial_code": "+503",
+    "country_code": "SV",
+    "emoji": "🇸🇻",
+    "emoji_unicode": "U+1F1F8 U+1F1FB",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SV.svg",
+    "timezones": [
+      "America/El_Salvador"
+    ],
+    "latlng": [
+      13.83333333,
+      -88.91666666
+    ],
+    "capital": "San Salvador",
+    "currency_code": "USD",
+    "continent": "North America"
   },
   {
     "name": "Dominica",
@@ -3014,6 +3087,24 @@
     "continent": "Oceania"
   },
   {
+    "name": "Peru",
+    "dial_code": "+51",
+    "country_code": "PE",
+    "emoji": "🇵🇪",
+    "emoji_unicode": "U+1F1F5 U+1F1EA",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PE.svg",
+    "timezones": [
+      "America/Lima"
+    ],
+    "latlng": [
+      -10,
+      -76
+    ],
+    "capital": "Lima",
+    "currency_code": "PEN",
+    "continent": "South America"
+  },
+  {
     "name": "Philippines",
     "dial_code": "+63",
     "country_code": "PH",
@@ -3683,6 +3774,24 @@
     "continent": "Africa"
   },
   {
+    "name": "Paraguay",
+    "dial_code": "+595",
+    "country_code": "PY",
+    "emoji": "🇵🇾",
+    "emoji_unicode": "U+1F1F5 U+1F1FE",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PY.svg",
+    "timezones": [
+      "America/Asuncion"
+    ],
+    "latlng": [
+      -23,
+      -58
+    ],
+    "capital": "Asunción",
+    "currency_code": "PYG",
+    "continent": "South America"
+  },
+  {
     "name": "Suriname",
     "dial_code": "+597",
     "country_code": "SR",
@@ -4324,5 +4433,23 @@
     "capital": "Harare",
     "currency_code": "ZWL",
     "continent": "Africa"
+  },
+  {
+    "name": "Venezuela",
+    "dial_code": "+58",
+    "country_code": "VE",
+    "emoji": "🇻🇪",
+    "emoji_unicode": "U+1F1FB U+1F1EA",
+    "emoji_svg_url": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VE.svg",
+    "timezones": [
+      "America/Caracas"
+    ],
+    "latlng": [
+      8,
+      -66
+    ],
+    "capital": "Caracas",
+    "currency_code": "VEF",
+    "continent": "South America"
   }
 ]
