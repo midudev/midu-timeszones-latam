@@ -9,8 +9,6 @@ $dialog.addEventListener('click',(e) => {
 export const openingModal = () => {
   if(typeof $dialog.showModal === "function") {
     $dialog.showModal()
-  } else {
-    console.log('Fallback here!')
-  }
+  } 
 }
 

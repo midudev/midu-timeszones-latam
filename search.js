@@ -44,7 +44,7 @@ const getItemCountry = (country) => {
 
 let htmlResults = ''
 const listResults = (data) => {
-  console.log(data)
+  // console.log(data)
   data.forEach(country => {
     htmlResults += getItemCountry(country)    
   })
