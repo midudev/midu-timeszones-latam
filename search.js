@@ -1,5 +1,5 @@
 import countriesData from './allCountries.json'
-import { $, addFavorite, getDataFromStorage, removeFavorite } from './utils'
+import { $, addFavorite, getDataFromStorage, removeFavorite, showTimeResults } from './utils'
 
 const $dialog = $('dialog')
 const $btnSearchCountries = $('#searchCountries')
@@ -27,8 +27,8 @@ const getItemCountry = (country) => {
       <div class="hit-country-name">
         <span>${name}</span>
       </div>
-      <div class="hit-action" data-country="${name}" data-favorite="${Boolean(isFavorite)}">
-        <svg data-country="${name}" data-favorite="${Boolean(isFavorite)}" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" data-country="${name}" data-favorite="${Boolean(isFavorite)}" fill="${Boolean(isFavorite) ? "white": "none"}" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
+      <div class="hit-action fav${name}" data-country="${name}" data-favorite="${Boolean(isFavorite)}">
+        <svg class="fav${name}" data-country="${name}" data-favorite="${Boolean(isFavorite)}" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" class="fav${name}" data-country="${name}" data-favorite="${Boolean(isFavorite)}" fill="${Boolean(isFavorite) ? "white": "none"}" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
       </div>
     </div>
   </li>
@@ -60,17 +60,25 @@ $inputSearch.addEventListener('input', (e) => {
 $searchList.addEventListener('click', (e) => {
   const countryName = e.target.dataset.country
   const favorite = e.target.dataset.favorite
+  
   if(!countryName || !favorite) return
+
+  const svgPath = $(`path[data-country="${countryName}"]`)
+  const star = document.querySelectorAll(`.fav${countryName}`)
+  const isFavorite = favorite === 'true'
   // I did this because dataset returns a string
-  if(favorite === 'true') {
+  if(isFavorite) {
     removeFavorite(countryName)
   }else {
     const country = countriesData.find(c => c.name.toLowerCase() === countryName.toLowerCase())
-    console.log(country)
     addFavorite(country)
   }
-  const pathFill = favorite === 'true' ? 'none' : 'white'
-  document.querySelector(`path[data-country=${countryName}]`).setAttribute('fill', pathFill);
+
+  star.forEach(s => s.dataset.favorite = !isFavorite )
+  const pathFill = isFavorite ? 'none' : 'white'
+  svgPath.setAttribute('fill', pathFill)
+  // Refreshing data with new favorites
+  $('textarea').value = showTimeResults($('input').value)
 })
 
 const removeHandler = () => window.removeEventListener('keydown', handler)
