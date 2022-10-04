@@ -19,6 +19,18 @@ body {
   border-radius: 25px;
 }
 
+.custom-group-kbd {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+
+.custom-kbd {
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
 .search-list {
   padding: 0;
 }
