@@ -1,5 +1,5 @@
 import countriesData from './allCountries.json'
-import { $ } from './utils'
+import { $, getDataFromStorage } from './utils'
 
 const $dialog = $('dialog')
 const $btnSearchCountries = $('#searchCountries')
@@ -18,6 +18,8 @@ const openingModal = () => {
 
 const getItemCountry = (country) => {
   const {name, emoji } = country
+  const storageData = getDataFromStorage('countries')
+  const isFavorite = storageData.find(cou => cou.name === name)
   return `
   <li role="option" class="search-hit">
     <div class="container-hit">
@@ -26,7 +28,7 @@ const getItemCountry = (country) => {
         <span>${name}</span>
       </div>
       <div class="hit-action">
-        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" fill="${Boolean(isFavorite) ? "white": "none"}" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"/></svg>
       </div>
     </div>
   </li>

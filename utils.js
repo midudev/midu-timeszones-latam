@@ -28,3 +28,8 @@ export const setInitialDate = () => {
 
   $('input').value = iso
 }
+
+export const getDataFromStorage = (path) => {
+  const data = localStorage.getItem(path)
+  return data ? JSON.parse(data) : [] 
+}

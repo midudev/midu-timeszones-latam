@@ -1,9 +1,14 @@
 import { toast } from 'https://cdn.skypack.dev/wc-toast'
 import countries from './countries.json'
-import { $, setInitialDate } from './utils'
+import { $, getDataFromStorage, setInitialDate } from './utils'
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill'
 
 polyfillCountryFlagEmojis()
+
+function initData() {
+  const countriesStorage = getDataFromStorage('countries')
+  if(countriesStorage.length === 0) localStorage.setItem('countries', JSON.stringify(countries))
+}
 
 function changeTimeZone (date, timeZone) {
   const dateToUse = typeof date === 'string'
@@ -34,8 +39,10 @@ $input.addEventListener('change', () => {
   const mainDate = new Date(date)
 
   const times = {}
-
-  countries.forEach(country => {
+  const storageData = getDataFromStorage('countries')
+  const countriesData = storageData.length > 0 ? storageData : countries
+  
+  countriesData.forEach(country => {
     const { country_code: code, emoji, timezones } = country
     const [timezone] = timezones
 
@@ -80,3 +87,4 @@ $input.addEventListener('change', () => {
 })
 
 setInitialDate()
+initData()
