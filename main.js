@@ -60,8 +60,6 @@ const fillTextArea = () => {
     .entries(times)
     .sort(([timeA], [timeB]) => timeB - +timeA)
 
-  console.log(sortedTimesEntries)
-
   const html = sortedTimesEntries
     .map(([, countries]) => {
       const flags = countries.map((country) => `${country.emoji}`).join(' ')
@@ -88,6 +86,20 @@ $input.addEventListener('change', () => {
   })
 })
 
+const buildLegend = () => {
+  const $legend = $('#legend')
+  const ul = document.createElement('ul')
+  countries.forEach(country => {
+    const li = document.createElement('li')
+    li.innerHTML = `
+      <span>${country.emoji}</span> ${country.name}
+    `
+    ul.appendChild(li)
+  })
+
+  $legend.appendChild(ul)
+}
+
 const onLoad = async () => {
   setInitialDate()
   fillTextArea()
@@ -95,3 +107,5 @@ const onLoad = async () => {
 }
 
 onLoad()
+
+buildLegend()
