@@ -85,7 +85,7 @@ $searchList.addEventListener('click', (e) => {
   const pathFill = isFavorite ? 'none' : 'white'
   svgPath.setAttribute('fill', pathFill)
   // Refreshing data with new favorites
-  $('textarea').value = showTimeResults($('input').value)
+  $('textarea').value = showTimeResults($('input').value, () => { console.log('Copied!') })
 })
 
 const removeHandler = () => window.removeEventListener('keydown', handler)
