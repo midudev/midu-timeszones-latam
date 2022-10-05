@@ -71,12 +71,17 @@ const transformDateToString = (date) => {
   return localDate.replace(':00', 'H')
 }
 
+const copyTextArea = async (content) => {
+  await navigator.clipboard.writeText(content)
+}
+
+
 export const showTimeResults = (date) => {
   const mainDate = new Date(date)
   const times = {}
   const storageData = getDataFromStorage('countries')
   const countriesData = storageData.length > 0 ? storageData : countries
-  countriesData.forEach(country => {
+  countriesData.forEach((country) => {
     const { country_code: code, emoji, timezones } = country
     const [timezone] = timezones
 
@@ -107,15 +112,14 @@ export const showTimeResults = (date) => {
     return `${transformDateToString(date)} ${flags}`
   }).join('\n')
 
-  // copiamos en el portapapeles el código
-  navigator.clipboard.writeText(html)
-    .then(() => {
-      toast('¡Copiado al portapeles!', {
-        icon: {
-          type: 'success'
-        }
-      })
+  // copiamos en el portapapeles y mostramos la notificación
+  copyTextArea(html).then(() => {
+    toast('¡Copiado al portapeles!', {
+      icon: {
+        type: 'success'
+      }
     })
+  })
 
   return html
 }

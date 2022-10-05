@@ -19,5 +19,9 @@ $input.addEventListener('change', () => {
   $textarea.value = html
 })
 
-setInitialDate()
-initData()
+const onLoad = () => {
+  setInitialDate()
+  initData()
+}
+
+onLoad()
