@@ -1,6 +1,6 @@
 
 import countries from './countries.json'
-import { $, getDataFromStorage, setInitialDate, showTimeResults } from './utils'
+import { $, getDataFromStorage, setInitialDate, showTimeResults, showToast } from './utils'
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill'
 
 polyfillCountryFlagEmojis()
@@ -13,14 +13,19 @@ function initData() {
 const $input = $('input')
 const $textarea = $('textarea')
 
+const fillTextArea = (date, cb) => {
+  const html = showTimeResults(date, cb)
+  $textarea.value = html
+}
+
 $input.addEventListener('change', () => {
   const date = $input.value
-  const html = showTimeResults(date)
-  $textarea.value = html
+  fillTextArea(date, showToast('¡Copiado al portapeles!', 'success'))
 })
 
 const onLoad = () => {
   setInitialDate()
+  fillTextArea($input.value, () => { console.log('Copied!') })
   initData()
 }
 

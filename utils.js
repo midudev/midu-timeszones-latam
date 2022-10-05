@@ -76,7 +76,7 @@ const copyTextArea = async (content) => {
 }
 
 
-export const showTimeResults = (date) => {
+export const showTimeResults = (date,cb) => {
   const mainDate = new Date(date)
   const times = {}
   const storageData = getDataFromStorage('countries')
@@ -113,13 +113,15 @@ export const showTimeResults = (date) => {
   }).join('\n')
 
   // copiamos en el portapapeles y mostramos la notificación
-  copyTextArea(html).then(() => {
-    toast('¡Copiado al portapeles!', {
-      icon: {
-        type: 'success'
-      }
-    })
-  })
+  copyTextArea(html).then(cb)
 
   return html
+}
+
+export const showToast = (message, type) => {
+  toast(message, {
+    icon: {
+      type
+    }
+  })
 }
