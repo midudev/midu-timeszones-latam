@@ -60,8 +60,6 @@ const fillTextArea = () => {
     .entries(times)
     .sort(([timeA], [timeB]) => timeB - +timeA)
 
-  console.log(sortedTimesEntries)
-
   const html = sortedTimesEntries
     .map(([, countries]) => {
       const flags = countries.map((country) => `${country.emoji}`).join(' ')
