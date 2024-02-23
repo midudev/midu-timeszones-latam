@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "standard": "^17.0.0",
-    "vite": "^3.0.7"
+    "standard": "17.1.0",
+    "vite": "3.2.8"
   },
   "eslintConfig": {
     "extends": "standard"
   },
   "dependencies": {
-    "country-flag-emoji-polyfill": "^0.1.4"
+    "country-flag-emoji-polyfill": "0.1.8"
   }
 }
